@@ -1,0 +1,5 @@
+# Logout the user
+logout:
+  url:   /logout
+  param: { module: cas, action: logout }
+  
