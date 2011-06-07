@@ -25,7 +25,7 @@ class casActions extends sfActions {
   * @param sfRequest $request A request object
   */
   public function executeLogout(sfWebRequest $request) {
-    $this->getUser()->signOut();
+    $this->getUser()->logout();
     // This exception should been never reach as the signOut must trigger a redirect
     throw new Exception("CAS Logout fail, there is a bug in the sfCASPlugin");
   }
