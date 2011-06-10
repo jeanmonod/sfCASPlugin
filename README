@@ -1,1 +1,5 @@
 Symfony CAS Plugin
+
+CAS (Central Authentication Service) is a SSO authentication system. More information (http://www.jasig.org/cas).
+
+This plugin include the popular phpCAS librairies and map it in the symfony way by providing a sfCASUser extending the sfBasicSecurityUser.
