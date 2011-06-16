@@ -1,5 +1,68 @@
-Symfony CAS Plugin
+# Symfony CAS Plugin (for symfony 1.4) #
 
 CAS (Central Authentication Service) is a SSO authentication system. More information (http://www.jasig.org/cas).
 
-This plugin include the popular phpCAS librairies and map it in the symfony way by providing a sfCASUser extending the sfBasicSecurityUser.
+This plugin include the popular phpCAS librairies and map above and beyond the standard security features of symfony.
+It provide a sfCASUser extending the sfBasicSecurityUser.
+
+## Installation ##
+
+  * Install the plugin (via a package)
+
+        symfony plugin:install sfCASPlugin
+
+  * Install the plugin (via a Git clone)
+  
+        git clone git://github.com/jeanmonod/sfCASPlugin.git plugins/sfCASPlugin
+
+  * Activate the plugin in the `config/ProjectConfiguration.class.php`
+  
+        [php]
+        class ProjectConfiguration extends sfProjectConfiguration
+        {
+          public function setup()
+          {
+            $this->enablePlugins(array(
+              '...', 
+              'sfCASPlugin',
+            ));
+          }
+        }
+
+  * Configure your CAS server in `app.yml`:
+
+        all:
+          cas:
+            server_name: 'cas-server-name'
+            server_port: 8443 
+            server_path: 'cas-path'
+
+
+### Secure your application ###
+
+To secure a symfony application:
+
+  * Enable the cas module in your `settings.yml`
+
+        all:
+          .settings:
+            enabled_modules:      [ ... , cas]
+
+    Do not secure `cas` module, it is the module that allows the user to log in and out.
+
+  * Change the default login and secure modules in `settings.yml`
+
+        .actions:
+          login_module:           cas
+          login_action:           login
+        
+  * Change the user class in `factories.yml`
+
+        all:
+          user:
+            class: sfCASUser
+        test:
+          user:
+            class: sfCASTestUser
+
+  * You're done. Now, if you try to access a secure page, you will be redirected to the CAS server login page.
