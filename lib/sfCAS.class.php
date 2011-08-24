@@ -44,7 +44,7 @@ class sfCAS {
     if ( file_exists($certifPath) ) {
       phpCAS::setCasServerCACert($certifPath);
     }
-    else if ( $certifPath === false && sfConfig::get('sf_environment') == 'dev' ){
+    else if ( $certifPath === false && sfConfig::get('sf_environment') != 'prod' ){
       phpCAS::setNoCasServerValidation();
     }
     else {
