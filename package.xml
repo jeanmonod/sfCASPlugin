@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.2" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfCasPlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>Symfony plugin to secure using Jasig CAS</summary>
+ <description>This plugin include the popular phpCAS librairies and map it in the symfony way by providing a sfCASUser extending the sfBasicSecurityUser.</description>
+ <lead>
+  <name>David Jeanmonod</name>
+  <user>jeanmonod</user>
+  <email>david@idael.ch</email>
+  <active>yes</active>
+ </lead>
+ <contributor>
+  <name>Hugues Lepesant</name>
+  <user>hugues</user>
+  <email>hugues@lepesant.com</email>
+  <active>yes</active>
+ </contributor>
+ <date>2011-12-08</date>
+ <time>09:23:07</time>
+ <version>
+  <release>1.0.2</release>
+  <api>1.0.2</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.symfony-project.com/license">MIT</license>
+ <notes>
+-
+ </notes>
+ <contents>
+   <dir name="/">
+     <file role="data" name="README" />
+     <file role="data" name="LICENSE" />
+     <dir name="config">
+       <file role="data" name="app.yml" />
+       <file role="data" name="routing.yml" />
+       <file role="data" name="sfCASPluginConfiguration.class.php" />
+     </dir>
+     <dir name="lib">
+       <file role="data" name="sfCAS.class.php" />
+       <dir name="vendor">
+         <dir name="phpCAS">
+           <file role="data" name="CAS.php" />
+             <dir name="CAS">
+               <file role="data" name="ProxiedService.php" />
+               <file role="data" name="CookieJar.php" />
+               <file role="data" name="OutOfSequenceException.php" />
+               <file role="data" name="ProxyTicketException.php" />
+               <file role="data" name="InvalidArgumentException.php" />
+               <file role="data" name="Client.php" />
+               <file role="data" name="Exception.php" />
+               <dir name="ProxiedService">
+                 <file role="data" name="Testable.php" />
+                 <file role="data" name="Http.php" />
+                 <file role="data" name="Imap.php" />
+                 <file role="data" name="Exception.php" />
+                 <file role="data" name="Abstract.php" />
+                 <dir name="Http">
+                   <file role="data" name="Post.php" />
+                   <file role="data" name="Get.php" />
+                   <file role="data" name="Abstract.php" />
+                 </dir>
+               </dir>
+               <dir name="PGTStorage">
+                 <file role="data" name="AbstractStorage.php" />
+                 <file role="data" name="File.php" />
+                 <file role="data" name="Db.php" />
+               </dir>
+               <dir name="languages">
+                 <file role="data" name="german.php" />
+                 <file role="data" name="english.php" />
+                 <file role="data" name="languages.php" />
+                 <file role="data" name="french.php" />
+                 <file role="data" name="japanese.php" />
+                 <file role="data" name="catalan.php" />
+                 <file role="data" name="greek.php" />
+                 <file role="data" name="spanish.php" />
+               </dir>
+               <dir name="Request">
+                 <file role="data" name="AbstractRequest.php" />
+                 <file role="data" name="Exception.php" />
+                 <file role="data" name="CurlRequest.php" />
+                 <file role="data" name="RequestInterface.php" />
+               </dir>
+             </dir>
+         </dir>
+       </dir>
+       <dir name="test">
+         <file role="data" name="sfCASTestUser.class.php" />
+       </dir>
+       <dir name="user">
+         <file role="data" name="sfCASUser.class.php" />
+       </dir>
+     </dir>
+   </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   <package>
+     <name>symfony</name>
+       <channel>pear.symfony-project.com</channel>
+       <min>1.4.1</min>
+       <max>1.4.15</max>
+     </package>
+  </required>
+ </dependencies>
+ <phprelease/>
+ <changelog>
+  <release>
+   <version>
+    <release>1.0</release>
+    <api>1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT</license>
+   <date>2011-06-15</date>
+   <notes>
+Initial version
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0</release>
+    <api>1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT</license>
+   <date>2011-06-15</date>
+   <notes>
+Initial version
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT</license>
+   <date>2011-06-15</date>
+   <notes>
+Initial version
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT</license>
+   <date>2011-06-15</date>
+   <notes>
+Initial version
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>=1.0.1</release>
+    <api>=1.0.1</api>
+   </version>
+   <stability>
+    <release/>
+    <api/>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT</license>
+   <date>2011-06-16</date>
+   <notes>
+=Update README file
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.1</release>
+    <api>1.0.1</api>
+   </version>
+   <stability>
+    <release/>
+    <api/>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT</license>
+   <date>2011-06-16</date>
+   <notes>
+Update README file
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.2</release>
+    <api>1.0.2</api>
+   </version>
+   <stability>
+    <release/>
+    <api/>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT</license>
+   <date>2011-08-12</date>
+   <notes>
+Update phpCAS to 1.2.2
+   </notes>
+  </release>
+ </changelog>
+</package>
