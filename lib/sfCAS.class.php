@@ -36,10 +36,20 @@ class sfCAS {
       sfConfig::get('app_cas_server_path'),
       false // Don't automatically start the session as it will be handle by the symfony session
     );
-    
-    // Disable SSL certificat validation in dev mode
-    if ( sfConfig::get('sf_environment') == 'dev'){
+   
+    // Server validation
+    $certifPath = sfConfig::get('app_cas_server_cert', false);
+    if ( ! strpos($certifPath, '/') === 0 ){
+      $cerifPath = sfConfig::get('sf_root_dir') . DIRECTORY_SEPARATOR . $cerifPath;
+    }
+    if ( file_exists($certifPath) ) {
+      phpCAS::setCasServerCACert($certifPath);
+    }
+    else if ( $certifPath === false && sfConfig::get('sf_environment') != 'prod' ){
       phpCAS::setNoCasServerValidation();
+    }
+    else {
+      throw new Exception("Invalid SSL certificat provide, please review in app.yml the app_cas_server_cert parameter");
     }
     
     // Log cas activity to the standard log directory in debug mode

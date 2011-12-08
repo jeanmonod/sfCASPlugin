@@ -6,3 +6,9 @@ all:
     server_name: 'cas-server-name'
     server_port: 8443 
     server_path: 'cas-path'
+
+    # SSL certificat location, can be:
+    #  relative to sf_root_dir, ex:    "data/cas/cert/mycert.pem"
+    #  absolute ex:                    "/usr/var/certif/xxx.pem"
+    #  disabled for dev context ex:    false
+    server_cert: false
