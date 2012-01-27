@@ -11,6 +11,7 @@
  * sfCAS, utility method to access the phpCAS lib
  * @package    sfCASPlugin
  * @author     D.Jeanmonod
+ * @maintainer H.Lepesant Thu, 08 Dec 2011 09:39:37 +0100
  */
 class sfCAS {
     
@@ -35,7 +36,7 @@ class sfCAS {
       sfConfig::get('app_cas_server_path'),
       false // Don't automatically start the session as it will be handle by the symfony session
     );
-    
+   
     // Server validation
     $certifPath = sfConfig::get('app_cas_server_cert', false);
     if ( ! strpos($certifPath, '/') === 0 ){
