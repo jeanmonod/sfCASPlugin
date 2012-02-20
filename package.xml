@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.2" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.4.1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
  <name>sfCasPlugin</name>
  <channel>plugins.symfony-project.org</channel>
  <summary>Symfony plugin to secure using Jasig CAS</summary>
@@ -10,93 +10,18 @@
   <email>david@idael.ch</email>
   <active>yes</active>
  </lead>
- <contributor>
-  <name>Hugues Lepesant</name>
-  <user>hugues</user>
-  <email>hugues@lepesant.com</email>
-  <active>yes</active>
- </contributor>
- <date>2011-12-08</date>
- <time>09:23:07</time>
+ <date>2012-02-20</date>
  <version>
-  <release>1.0.2</release>
-  <api>1.0.2</api>
+   <release>1.0.4</release>
+   <api>1.0.4</api>
  </version>
  <stability>
   <release>stable</release>
   <api>stable</api>
  </stability>
- <license uri="http://www.symfony-project.com/license">MIT</license>
- <notes>
--
- </notes>
- <contents>
-   <dir name="/">
-     <file role="data" name="README" />
-     <file role="data" name="LICENSE" />
-     <dir name="config">
-       <file role="data" name="app.yml" />
-       <file role="data" name="routing.yml" />
-       <file role="data" name="sfCASPluginConfiguration.class.php" />
-     </dir>
-     <dir name="lib">
-       <file role="data" name="sfCAS.class.php" />
-       <dir name="vendor">
-         <dir name="phpCAS">
-           <file role="data" name="CAS.php" />
-             <dir name="CAS">
-               <file role="data" name="ProxiedService.php" />
-               <file role="data" name="CookieJar.php" />
-               <file role="data" name="OutOfSequenceException.php" />
-               <file role="data" name="ProxyTicketException.php" />
-               <file role="data" name="InvalidArgumentException.php" />
-               <file role="data" name="Client.php" />
-               <file role="data" name="Exception.php" />
-               <dir name="ProxiedService">
-                 <file role="data" name="Testable.php" />
-                 <file role="data" name="Http.php" />
-                 <file role="data" name="Imap.php" />
-                 <file role="data" name="Exception.php" />
-                 <file role="data" name="Abstract.php" />
-                 <dir name="Http">
-                   <file role="data" name="Post.php" />
-                   <file role="data" name="Get.php" />
-                   <file role="data" name="Abstract.php" />
-                 </dir>
-               </dir>
-               <dir name="PGTStorage">
-                 <file role="data" name="AbstractStorage.php" />
-                 <file role="data" name="File.php" />
-                 <file role="data" name="Db.php" />
-               </dir>
-               <dir name="languages">
-                 <file role="data" name="german.php" />
-                 <file role="data" name="english.php" />
-                 <file role="data" name="languages.php" />
-                 <file role="data" name="french.php" />
-                 <file role="data" name="japanese.php" />
-                 <file role="data" name="catalan.php" />
-                 <file role="data" name="greek.php" />
-                 <file role="data" name="spanish.php" />
-               </dir>
-               <dir name="Request">
-                 <file role="data" name="AbstractRequest.php" />
-                 <file role="data" name="Exception.php" />
-                 <file role="data" name="CurlRequest.php" />
-                 <file role="data" name="RequestInterface.php" />
-               </dir>
-             </dir>
-         </dir>
-       </dir>
-       <dir name="test">
-         <file role="data" name="sfCASTestUser.class.php" />
-       </dir>
-       <dir name="user">
-         <file role="data" name="sfCASUser.class.php" />
-       </dir>
-     </dir>
-   </dir>
- </contents>
+<license uri="http://www.symfony-project.com/license">MIT</license>
+ <notes>-</notes>
+ <contents><dir name="/"><dir name="config"><file name="app.yml" role="data"/><file name="routing.yml" role="data"/><file name="sfCASPluginConfiguration.class.php" role="data"/></dir><dir name="lib"><file name="sfCAS.class.php" role="data"/><dir name="test"><file name="sfCASTestUser.class.php" role="data"/></dir><dir name="user"><file name="sfCASUser.class.php" role="data"/></dir><dir name="vendor"><dir name="phpCAS"><dir name="CAS"><file name="client.php" role="data"/><file name="CookieJar.php" role="data"/><file name="Exception.php" role="data"/><file name="InvalidArgumentException.php" role="data"/><dir name="languages"><file name="catalan.php" role="data"/><file name="english.php" role="data"/><file name="french.php" role="data"/><file name="german.php" role="data"/><file name="greek.php" role="data"/><file name="japanese.php" role="data"/><file name="languages.php" role="data"/><file name="spanish.php" role="data"/></dir><file name="OutOfSequenceException.php" role="data"/><dir name="PGTStorage"><file name="AbstractStorage.php" role="data"/><file name="Db.php" role="data"/><file name="File.php" role="data"/><file name="pgt-db.php" role="data"/><file name="pgt-file.php" role="data"/><file name="pgt-main.php" role="data"/></dir><dir name="ProxiedService"><file name="Abstract.php" role="data"/><file name="Exception.php" role="data"/><dir name="Http"><file name="Abstract.php" role="data"/><file name="Get.php" role="data"/><file name="Post.php" role="data"/></dir><file name="Http.php" role="data"/><file name="Imap.php" role="data"/><file name="Testable.php" role="data"/></dir><file name="ProxiedService.php" role="data"/><file name="ProxyTicketException.php" role="data"/><dir name="Request"><file name="AbstractRequest.php" role="data"/><file name="CurlRequest.php" role="data"/><file name="Exception.php" role="data"/><file name="RequestInterface.php" role="data"/></dir></dir><file name="CAS.php" role="data"/></dir></dir></dir><file name="LICENSE" role="data"/><dir name="modules"><dir name="cas"><dir name="actions"><file name="actions.class.php" role="data"/></dir><dir name="config"><file name="security.yml" role="data"/></dir></dir></dir><file name="README" role="data"/></dir></contents>
  <dependencies>
   <required>
    <php>
@@ -106,119 +31,15 @@
     <min>1.4.1</min>
    </pearinstaller>
    <package>
-     <name>symfony</name>
-       <channel>pear.symfony-project.com</channel>
-       <min>1.4.1</min>
-       <max>1.4.15</max>
-     </package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.3.0</min>
+    <max>1.4.8</max>
+   </package>
   </required>
  </dependencies>
- <phprelease/>
+ <phprelease>
+ </phprelease>
  <changelog>
-  <release>
-   <version>
-    <release>1.0</release>
-    <api>1.0</api>
-   </version>
-   <stability>
-    <release>stable</release>
-    <api>stable</api>
-   </stability>
-   <license uri="http://www.symfony-project.com/license">MIT</license>
-   <date>2011-06-15</date>
-   <notes>
-Initial version
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>1.0</release>
-    <api>1.0</api>
-   </version>
-   <stability>
-    <release>stable</release>
-    <api>stable</api>
-   </stability>
-   <license uri="http://www.symfony-project.com/license">MIT</license>
-   <date>2011-06-15</date>
-   <notes>
-Initial version
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>1.0.0</release>
-    <api>1.0.0</api>
-   </version>
-   <stability>
-    <release>stable</release>
-    <api>stable</api>
-   </stability>
-   <license uri="http://www.symfony-project.com/license">MIT</license>
-   <date>2011-06-15</date>
-   <notes>
-Initial version
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>1.0.0</release>
-    <api>1.0.0</api>
-   </version>
-   <stability>
-    <release>stable</release>
-    <api>stable</api>
-   </stability>
-   <license uri="http://www.symfony-project.com/license">MIT</license>
-   <date>2011-06-15</date>
-   <notes>
-Initial version
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>=1.0.1</release>
-    <api>=1.0.1</api>
-   </version>
-   <stability>
-    <release/>
-    <api/>
-   </stability>
-   <license uri="http://www.symfony-project.com/license">MIT</license>
-   <date>2011-06-16</date>
-   <notes>
-=Update README file
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>1.0.1</release>
-    <api>1.0.1</api>
-   </version>
-   <stability>
-    <release/>
-    <api/>
-   </stability>
-   <license uri="http://www.symfony-project.com/license">MIT</license>
-   <date>2011-06-16</date>
-   <notes>
-Update README file
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>1.0.2</release>
-    <api>1.0.2</api>
-   </version>
-   <stability>
-    <release/>
-    <api/>
-   </stability>
-   <license uri="http://www.symfony-project.com/license">MIT</license>
-   <date>2011-08-12</date>
-   <notes>
-Update phpCAS to 1.2.2
-   </notes>
-  </release>
- </changelog>
+ <release><version><release>1.0</release><api>1.0</api></version><stability><release>stable</release><api>stable</api></stability><license uri="http://www.symfony-project.com/license">MIT</license><date>2011-06-15</date><notes>Initial version</notes></release><release><version><release>1.0</release><api>1.0</api></version><stability><release>stable</release><api>stable</api></stability><license uri="http://www.symfony-project.com/license">MIT</license><date>2011-06-15</date><notes>Initial version</notes></release><release><version><release>1.0.0</release><api>1.0.0</api></version><stability><release>stable</release><api>stable</api></stability><license uri="http://www.symfony-project.com/license">MIT</license><date>2011-06-15</date><notes>Initial version</notes></release><release><version><release>1.0.0</release><api>1.0.0</api></version><stability><release>stable</release><api>stable</api></stability><license uri="http://www.symfony-project.com/license">MIT</license><date>2011-06-15</date><notes>Initial version</notes></release><release><version><release>=1.0.1</release><api>=1.0.1</api></version><stability><release/><api/></stability><license uri="http://www.symfony-project.com/license">MIT</license><date>2011-06-16</date><notes>=Update README file</notes></release><release><version><release>1.0.1</release><api>1.0.1</api></version><stability><release/><api/></stability><license uri="http://www.symfony-project.com/license">MIT</license><date>2011-06-16</date><notes>Update README file</notes></release><release><version><release>1.0.4</release><api>1.0.4</api></version><stability><release>stable</release><api>stable</api></stability><license uri="http://www.symfony-project.com/license">MIT</license><date>2012-02-20</date><notes>Repackage, as the 1.0.3 was brocken (missing files)</notes></release><release><version><release>1.0.4</release><api>1.0.4</api></version><stability><release>stable</release><api>stable</api></stability><license uri="http://www.symfony-project.com/license">MIT</license><date>2012-02-20</date><notes>Repackage, as the 1.0.3 was brocken (missing files)</notes></release></changelog>
 </package>
